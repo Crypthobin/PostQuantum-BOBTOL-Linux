@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf exec
+
 mkdir exec
 cd src
 cp bitcoind ../exec

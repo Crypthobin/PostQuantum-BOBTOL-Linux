@@ -2,8 +2,8 @@
 BOB-TOL is Based On Bitcoin, Toward Outlasting any Legacy.<br>
 BOB-TOL is the safest and fastest cryptocurrency that can respond to quantum computers.
 ## Reference ##
-- Website: (...)
-- Whitepaper: (...)
+- Website: (www.pqbobtol.com)
+- Whitepaper: (www.pqbobtol.com)
 ## Guidelines ##
 ### Cloning a repository ###
 ```
@@ -53,7 +53,7 @@ sudo dnf install sqlite-devel
 
 - Default data directory is "~/.bitcoin"
 - Create directory what you want to use data directory for BOBTOL
-- If you want to change default directory, copy and paste "BOBTOL/Src/BOBTOL-Linux/share/examples/bitcoin.conf" into "~/.bitcoin"
+- If you want to change default directory, copy and paste "./Src/BOBTOL-Linux/share/examples/bitcoin.conf" into "~/.bitcoin"
 - Add the content below to "~/.bitcoin/bitcoin.conf"
 
 ```
@@ -61,7 +61,7 @@ sudo dnf install sqlite-devel
 [pqcnet]
 datadir=<your data directory> # This is the path of the data folder you created.
 ```
-- example : datadir=~/BOBTOL/Src/BOBTOL-Linux/data
+- example : datadir=./Src/BOBTOL-Linux/data
 
 #### 3) Berkeley DB
 
@@ -74,7 +74,7 @@ datadir=<your data directory> # This is the path of the data folder you created.
 - Run shell and makefile
 
 ``` 
-cd BOBTOL/Src/BOBTOL-Linux
+cd ./Src/BOBTOL-Linux
 ./autogen.sh
 export BDB_PREFIX='your bdb directory what you memo in 3) Berkeley DB'
 ./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include"
@@ -91,6 +91,7 @@ make install # optional
 - example
 
 ``` 
+cd ./Src/BOBTOL-Linux/exec
 ./bobtold
 ./bobtol-cli createwallet "wallet"
 ```
