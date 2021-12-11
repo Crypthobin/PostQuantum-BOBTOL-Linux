@@ -242,7 +242,7 @@ static bool AppInit(NodeContext& node, int argc, char* argv[])
 #endif
     if (fRet) {
     	sleep(5);
-    	system("./bobtol-cli addnode \"61.77.208.189\" \"add\"");
+    	system("./bobtol-cli addnode \"13.124.116.215\" \"add\"");
         sleep(5);
         WaitForShutdown();
     }
